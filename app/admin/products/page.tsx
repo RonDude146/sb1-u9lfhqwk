@@ -130,7 +130,7 @@ export default function AdminProductsPage() {
     return matchesSearch && matchesCategory && matchesStatus;
   });
 
-  const categories = [...new Set(products.map(p => p.category))];
+  const categories = Array.from(new Set(products.map(p => p.category)));
 
   if (status === 'loading' || loading) {
     return (
