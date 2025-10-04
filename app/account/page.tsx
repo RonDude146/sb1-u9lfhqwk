@@ -64,7 +64,7 @@ export default function AccountPage() {
       setProfile({
         name: session.user.name || '',
         email: session.user.email || '',
-        phone: session.user.phone || '',
+        phone: (session.user as any).phone || '',
         image: session.user.image || '',
       });
       fetchPreferences();
